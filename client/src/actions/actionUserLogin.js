@@ -26,7 +26,7 @@ export function userLoginFailure(err){
 export function authenticateUser(user){
   return function(dispatch){
     dispatch(userLogin);
-    return fetch('/api/users/signin', , {
+    return fetch('/api/users/signin', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
