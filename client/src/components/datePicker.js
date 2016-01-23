@@ -1,25 +1,16 @@
 import React from 'react';
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
+import DatePicker from 'material-ui/lib/date-picker/date-picker';
 
-export default class Calendar extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {startDate : moment()};
-    this.handleChange = this.handleChange.bind(this);
-  }
+const DatePickerExampleInline = () => (
+  <div>
+    <DatePicker
+      hintText="Inline"
+      container="inline" />
+    <DatePicker
+      hintText="Inline (AutoOk)"
+      container="inline"
+      autoOk={true} />
+  </div>
+);
 
-  handleChange(){
-    this.setState({
-      startDate: date
-    });
-  }
-
-  render(){
-   return (
-      <div>
-        <DatePicker selected={this.state.startDate} onChange={this.handleChange}/>
-      </div>
-    )
-  }
-};
+export default DatePickerExampleInline;

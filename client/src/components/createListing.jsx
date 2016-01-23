@@ -2,16 +2,33 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {postListing} from './../actions/actionsCreateListing';
-import CategorySelection from './CategorySelection';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import SelectField from 'material-ui/lib/select-field';
+import MenuItem from 'material-ui/lib/menus/menu-item';
+import RaisedButton from 'material-ui/lib/raised-button';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
-class CreateListing extends React.Component {
+export default class CreateListing extends React.Component {
   constructor(props){
     super(props);
-    this.state =  {categorySelected: ''};
+    
+    this.state = { categorySelected: '', value: 2, startDate: moment(), endDate: moment() };
   }
 
-  _handleChange(event) {
-    this.setState({categorySelected: event.target.value});
+
+  _handleChange(event, index, value){ 
+    console.log(event, "event", index, "index", value, "value");
+    this.setState({value});
+  }
+  
+  _startDate(firstDate) {
+    this.setState({startDate: firstDate.format("YYYY-MM-DD H").valueOf()});
+  }
+
+  _endDate(lastDate) {
+    this.setState({endDate: lastDate.format("YYYY-MM-DD H").valueOf()});
   }
 
   submitForm(){
@@ -19,6 +36,9 @@ class CreateListing extends React.Component {
       productName: this.refs.name.value,
       createdBy : this.refs.name.value,
       category : this.state.categorySelected,
+      startdate : this.state.startDate,
+      enddate : this.state.endDate,
+      hour: 17,
       quantity : this.refs.quantity.value,
       price: this.refs.price.value,
       minPrice: this.refs.minPrice.value
@@ -29,35 +49,52 @@ class CreateListing extends React.Component {
   render() {
     return (
       <form role="form">
-      <div>
-        <label>Name</label>
-        <input type="text" ref="name" />
+        <div className="form-group">
+          <label>Name</label>
+          <input type="text" ref="name" className="form-group col-md-4"/>
+        </div>
 
-        <label>Quantity</label>
-        <input type="text" ref="quantity"/>
+        <div className="form-group">
+          <label>Quantity</label>
+          <input type="text" ref="quantity" className="form-group col-md-4"/>
+        </div>
 
-        <select
-          value={this.state.categorySelected}
-          onChange={this._handleChange.bind(this)} >
+        <div className="form-group">
+          <DatePicker
+            placeholderText="Start date"
+            selected={this.state.startDate}
+            startDate={this.state.startDate}
+            endDate={this.state.endDate}
+            onChange={this._startDate.bind(this)} />
 
-          <option value="AntiquesCollectibles">Antiques & Collectibles</option>
-          <option value="Art">Art</option>
-          <option value="Automobiles">Automobiles</option>
-          <option value="Clothing">Clothing, Shoes and Accessories</option>
-          <option value="Entertainment">Entertainment Memorabilia</option>
-          <option value="JewelryWatches">Jewelry and Watches</option>
-          <option value="TicketsExperiences">Tickets and Experiences</option>
-          <option value="Travel">Travel</option>
-        </select>
+          <DatePicker
+            placeholderText="End date"
+            selected={this.state.endDate}
+            startDate={this.state.startDate}
+            endDate={this.state.endDate}
+            onChange={this._endDate.bind(this)} />
+          </div>
 
-        <label>Price</label>
-        <input type="text" ref="price" />
+        <SelectField value={this.state.value} onChange={this._handleChange.bind(this)}>
+          <MenuItem value={2} primaryText="Art"/>
+          <MenuItem value={1} primaryText="Collectibles"/>
+          <MenuItem value={3} primaryText="Clothing"/>
+          <MenuItem value={4} primaryText="Entertainment"/>
+          <MenuItem value={5} primaryText="Jewelry"/>
+          <MenuItem value={6} primaryText="Travel"/>
+        </SelectField>
 
-        <label>Minimum Sales Price</label>
-        <input type="text" ref="minPrice" />
-     
-        <button type="button" onClick={this.submitForm.bind(this)}>List Item</button>
-      </div>
+        <div className="form-group">
+          <label>Price</label>
+          <input type="text" ref="price" className="form-group col-md-2"/>
+        </div>
+
+        <div className="form-group">
+          <label>Minimum Sales Price</label>
+          <input type="text" ref="minPrice" className="form-group col-md-2"/>
+        </div>
+
+        <RaisedButton label="List Item" onClick={this.submitForm.bind(this)} ></RaisedButton> 
       </form>
     )
   }
