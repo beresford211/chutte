@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import NavBar from './../components/navbar';
 import SearchBar from './../components/search';
 import ProductCard from './../components/productCard';
+import BrowseSideBar from './../components/BrowseSideBar';
 import {fetchProducts} from './../actions/actionsProducts';
 
 class BrowsePage extends React.Component {
@@ -16,6 +17,7 @@ class BrowsePage extends React.Component {
       return <ProductCard productDetail={product} />
     }) : [];
 
+
     return (
       <div>
         <NavBar/>
@@ -24,6 +26,8 @@ class BrowsePage extends React.Component {
           <div className="row">
             {productCards}
           </div>
+          <BrowseSideBar />
+
         </div>
       </div>
     )

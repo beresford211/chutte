@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "start" : "node server/server.js",
     "test": "npm run test-server",
     "test-server": "mocha -R spec ./test/serverSpec.js",
     "webserver": "nodemon server/server.js",
