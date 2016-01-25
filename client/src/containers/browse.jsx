@@ -22,12 +22,13 @@ class BrowsePage extends React.Component {
       <div>
         <NavBar/>
         <div className="container-fluid">
-          <SearchBar className="serach-bar col-sm-10"/>
-          <div className="row">
-            {productCards}
-          </div>
-          <BrowseSideBar />
-
+          <SearchBar className="serach-bar"/>
+          <row>
+          <BrowseSideBar className="col-sm-2"/>
+            <div className="serach-bar col-sm-7">
+              {productCards}
+            </div>
+          </row>
         </div>
       </div>
     )

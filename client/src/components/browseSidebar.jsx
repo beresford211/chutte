@@ -7,7 +7,6 @@ export default class BrowseSideNavbar extends React.Component {
     var category = ["Antiques", "Art", "Automobiles", "clothing", "electronics",
     "Entertainment", "Jewelry", "Tickets and Experiences", "Travel"];
     return (
-      <div className="row">
          <div className="col-sm-3 col-md-2 sidebar">
           <ul className="nav nav-sidebar browse">
               {category.map(function(subCategory, index) {
@@ -15,7 +14,6 @@ export default class BrowseSideNavbar extends React.Component {
               })}
           </ul>
         </div>
-      </div>
     );
   }
 };
