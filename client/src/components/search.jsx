@@ -8,10 +8,11 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
-        <input 
+      <div className="search-bar">
+        <input className="search-bar"
           value = {this.state.searchVal}
           onChange={(event) => this.onChangeFunc(event.target.value)} />
+        <button className="btn btn-default" type="button">Search</button>
       </div>
     )
   }

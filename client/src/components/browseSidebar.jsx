@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 export default class BrowseSideNavbar extends React.Component {
 
   render() {
-    var category = ["Antiques", "Art", "Automobiles", "clothing", "electronics",
+    var category = ["Antiques", "Art", "Automobiles", "Clothing", "Electronics",
     "Entertainment", "Jewelry", "Tickets and Experiences", "Travel"];
     return (
          <div className="col-sm-3 col-md-2 sidebar">
