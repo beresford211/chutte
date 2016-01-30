@@ -62,7 +62,6 @@ export default class UserSignup extends React.Component {
 
               </div>
 
-
               <div className="col-md-3">
                 <div className="form-group">
                   <label>First Name</label>
@@ -100,6 +99,23 @@ export default class UserSignup extends React.Component {
                 <input type="text" ref="country" className="form-control" placeholder='Country' required/>
               </div>
 
+              </div>
+              <div className="form-group">
+                <label>City</label>
+                <input type="text" ref="city" className="form-control" placeholder='City' required/>
+              </div>
+              <div className="form-group">
+                <label>State</label>
+                <input type="text" ref="state" className="form-control" placeholder='State' required/>
+              </div>
+              <div className="form-group">
+                <label>Zip Code</label>
+                <input type="text" ref="zip" className="form-control" placeholder='Zip Code' required/>
+              </div>
+              <div className="form-group">
+                <label>Country</label>
+                <input type="text" ref="country" className="form-control" placeholder='Country' required/>
+              </div>
 
               <div className="form-group">
                 <button className="btn btn-primary btn-lg" onClick={this.matchPassword.bind(this)}>Submit</button>
