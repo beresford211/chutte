@@ -25,7 +25,14 @@ module.exports = {
                   var token = jwt.encode(user, 'secret');
                   res.json({
                     username: user.username,
-                    token: token,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    phone: user.phone,
+                    streetAddress: user.streetAddress,
+                    stateRegion: user.stateRegion,
+                    city: user.city,
+                    zip: user.zip,
+                    token: token
                   });
                 } else {
                   res.status(401).send('User or password is incorrect');
@@ -110,7 +117,6 @@ module.exports = {
           });
       }
     },
-
     userUpdate: function(req, res, next) {
       var token = req.headers['x-access-token'];
       if (!token) {

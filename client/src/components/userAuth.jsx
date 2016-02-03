@@ -13,12 +13,10 @@ class UserAuth extends React.Component{
   submitUserLogin(e){
     e.preventDefault();
     let user = {
-      userName: this.state.userEmail,
+      username: this.state.userEmail,
       password: this.refs.password.value
     };
-
     this.props.signInUser(user);
-    this.props.history.push('browse');
   }
 
   checkUserName(event){
