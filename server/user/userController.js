@@ -111,7 +111,7 @@ module.exports = {
       }
     },
 
-    updateUser: function(req, res, next) {
+    userUpdate: function(req, res, next) {
       var token = req.headers['x-access-token'];
       if (!token) {
         next(new Error('no token'));
