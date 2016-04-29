@@ -487,11 +487,9 @@ ul.navbar-right {
 .productCard {
     margin: 20px;
     border: 1px solid;
-    border-radius: 12px;
     padding: 10px;
     border-color: #A5A4A5;
     background: white;
-
 }
 
 
@@ -662,12 +660,11 @@ input[type="file"] {
 }
 
 .container1 {
-    margin: 10px;
     height: 200px;
     line-height: 115px;
     overflow: hidden;
-
 }
+
 .container1 img {
     width: 100%;
     background-image: url('http://res.cloudinary.com/chutteapi/image/upload/c_scale,w_225/v1453918622/default_oczf9m.png');

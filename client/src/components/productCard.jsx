@@ -15,15 +15,16 @@ class ProductCard extends React.Component {
             <ProductImage className="productImage" image={this.props.productDetail.image}/>
 
             <row>
-            <div className="productName">
-               {this.props.productDetail.productName}
-            </div>
+              <div className="productName">
+                 {this.props.productDetail.productName}
+              </div>
+              
               <div className="productTime buyModalDetails">
                 <Timer nextUpdateTime={this.props.productDetail.timeRemaining}/>
               </div>
 
               <div className="productQuantity">
-                <p className="productinfo">Quantity: {this.props.productDetail.quantity}</p>
+                <p className="productinfo">Qty: {this.props.productDetail.quantity}</p>
               </div>
 
               <div className="productPrice">

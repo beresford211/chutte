@@ -59,7 +59,7 @@ class ProductDetail extends React.Component {
             </div>
 
             <div className="productQuantity">
-              <p className="productinfo">Quantity: {this.props.products[this.productIndex].quantity}</p>
+              <p className="productinfo">Qty: {this.props.products[this.productIndex].quantity}</p>
             </div>
 
             <div className="productPrice">
