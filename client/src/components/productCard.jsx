@@ -12,12 +12,12 @@ class ProductCard extends React.Component {
     return (
         <Col xs={12} sm={6} md={4} className="portfolio-item">
           <div className="productCard" id={this.props.productDetail._id}>
-            <div className="productName">
-               {this.props.productDetail.productName}
-            </div>
             <ProductImage className="productImage" image={this.props.productDetail.image}/>
 
             <row>
+            <div className="productName">
+               {this.props.productDetail.productName}
+            </div>
               <div className="productTime buyModalDetails">
                 <Timer nextUpdateTime={this.props.productDetail.timeRemaining}/>
               </div>
