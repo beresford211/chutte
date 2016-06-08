@@ -9,17 +9,16 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="col-sm-12 col-md-12 search-bar">
-      <div className="input-group">
-      <input type="text"
-      className="form-control" 
-      placeholder="Search for..." 
-      value = {this.state.searchVal}
-          onChange={(event) => this.onChangeFunc(event.target.value)} />
-    </div>
-    </div>
+        <div className="input-group">
+          <input type="text"
+          className="form-control" 
+          placeholder="Search for..YOOOOtesting." 
+          value = {this.state.searchVal}
+              onChange={(event) => this.onChangeFunc(event.target.value)} />
+        </div>
+      </div>
     )
   }
-
   onChangeFunc(inputVal){
     this.setState({searchVal : inputVal});
   }

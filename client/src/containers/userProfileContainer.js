@@ -5,7 +5,7 @@ import {postUpdateProfile} from './../actions/actionsUserSignup';
 function mapDispatchToProps(dispatch){
   return {
     updateProfile: function(user, token){
-      dispatch(postUpdateProfile(user, token))
+      dispatch(postUpdateProfile(user, token));
     }
   }
 };

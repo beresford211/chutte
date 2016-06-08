@@ -23,7 +23,6 @@ const initialState = {
 };
 
 function userAuth(state = initialState, action){
-
   switch (action.type) {
     case USER_LOGIN:
       return Object.assign({}, state, {
@@ -100,7 +99,6 @@ function userAuth(state = initialState, action){
 }
 
 function userPurchases(state = initialState, action){
-
   switch (action.type) {
     case POST_BUY:
       return Object.assign({}, state, {

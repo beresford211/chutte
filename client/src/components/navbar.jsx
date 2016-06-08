@@ -10,8 +10,8 @@ const Navbar = function({user, submitSignout, signInUser, signupUser}) {
     return (
       <nav className="navbar navbar-default navBrowse">
         <div className="container-fluid chutteGreen">
-            <div className="navbar-header">
-              <Link to="/" className="navbar-brand">{icon}</Link>
+            <div className="navbar-header navBrand">
+              <Link to="/" className="navbar-brand navBrand">{icon}</Link>
             </div>
           <ul className="nav navbar-nav">
             <li><Link to="/browse" activeClassName="active">Browse</Link></li>
@@ -27,7 +27,7 @@ const Navbar = function({user, submitSignout, signInUser, signupUser}) {
     return (
       <nav className="navbar navbar-default navBrowse">
         <div className="container-fluid chutteGreen">
-          <div className="navbar-header">
+          <div className="navbar-header navBrand">
             <Link to="/" className="navbar-brand">{icon}</Link>
           </div>
             <ul className="nav navbar-nav navbar-right">

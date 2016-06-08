@@ -1,3 +1,20 @@
+body{
+    background-color: rgba(236, 236, 236, 0.55)
+}
+
+h2 {
+ text-align: center;
+}
+
+.buy-btn{
+    background-color: #FF9500;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: -10px;
+    margin-top: 10px;
+}
+
 .sideBar {
     z-index: 3;
     position: fixed;
@@ -14,6 +31,7 @@
 
 ul.sidebar-font > li:hover{
     color: #085E3D;
+    background-color: rgba(179, 179, 179, 0.46);
 }
 
 ul.sidebar-font > li.active{
@@ -490,6 +508,8 @@ ul.navbar-right {
     padding: 10px;
     border-color: #A5A4A5;
     background: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 8px rgba(128, 128, 128, 0.27)
 }
 
 
@@ -501,15 +521,22 @@ ul.navbar-right {
 
 .productinfo {
     font-size: 15px;
+    font-weight: none;
+}
+
+.productinfo > span {
     font-weight: bold;
+    color: #006941;
 }
 
 .productName {
     font-weight: bold;
-    text-align: center;
     color: #00AC69;
     font-size: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     border-top: 2px #ccc solid;
+
 }
 
 .chutteGreen {
@@ -550,6 +577,7 @@ ul.navbar-right {
     border-radius: 20px;
     width: 45%;
     padding: 10px;
+    border: 2px solid rgb(204, 204, 204)
 }
 
 .navbar-default {
@@ -559,6 +587,7 @@ ul.navbar-right {
     font-weight: bold;
     font-size: 18px;
     border-width: 0px;
+    border-bottom: 2px solid white;
 }
 
 .navbar {
@@ -597,6 +626,7 @@ ul.navbar-right {
 
 .full {
     background: url('../assets/landing-bkg.jpg') no-repeat center center fixed;
+    border-bottom: 2px solid green;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -629,6 +659,7 @@ input[type="file"] {
 }
 
 .homeInfo {
+    clear: both;
     margin-top: 20px;
     margin-left: 15%;
     margin-right: 15%;
@@ -797,38 +828,35 @@ textarea{
 }
 
 ul.sidebar-font{
+  height: 100%;
   margin-top: 67px;
   padding-top: 0px;
   padding-left: 25px;
   border-top: 1px solid white;
+  background-color: #e9e9e9;
   border-bottom: 2.5px solid #00AC69;
 }
 
 .sidebar-font > li {
     color: #00AC69;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     list-style-type: none;
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-bottom: 10px;
-    padding-right: 5px;
-    border-top: 2.5px solid #00AC69;
-    border-left: 2.5px solid #00AC69;
-    border-right: 2.5px solid #00AC69;
+    padding: 13px 12px;
 }
 
 .sidebar-font > li:hover {
     color: #085E3D;
-
+    cursor: pointer;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     list-style-type: none;
 }
 
 ul{
     margin-left: -225px;
 }
+
 .bumpDown{
     top:200px;
 }
@@ -847,6 +875,10 @@ ul{
 
     .bumpDown{
     top:95px;
+    }
+
+    .chutteGreen {
+        margin-left: 25px;
     }
 
 
@@ -897,9 +929,11 @@ ul{
 }
 
 .profile-image{
-    height: 200px;
+    height: 150px;
     width: auto;
     border-radius: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .footer {
@@ -907,12 +941,8 @@ ul{
     width: 100%;
     height: 105px;
     background-color: #f5f5f5;
-}
-
-.footerImg {
     text-align: center;
 }
-
 
 .productDetailQuantity {
     width: 140px;
@@ -923,3 +953,37 @@ ul{
     border-radius: 6px;
     margin-bottom: 15px;
 }
+
+.jumbo-shadow {
+    text-shadow: 1px 1px 1px black;
+} 
+
+.videoExplanation {
+    padding: 35px;
+}
+
+.rightSplit {
+    float: right;
+}
+
+.leftSplit {
+    float: left;
+}
+
+.chutteExplanation {
+    background-color: rgba(179, 179, 179, 0.46);
+    height: 400px;
+}
+
+.navBrand {
+    margin-left: 30px;
+}
+
+.jumbotron-title {
+    padding-top: 60px;
+}
+
+.dashboard-height {
+    height: 230px;
+}
+

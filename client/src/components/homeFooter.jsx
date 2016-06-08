@@ -2,10 +2,10 @@ import React from 'react';
 
 class HomeFooter extends React.Component {
   render(){
-    let octocat = (<span><img className="octocat" src="../assets/octocat.png"  alt="GitHub Logo" height="75" width="75" /></span>);
+    let octocat = (<span><img className="octocat" src="../assets/octocat.png"  alt="GitHub Logo" height="55" width="55" /></span>);
     return (
         <footer className="footer">
-        <br/>
+        <h4>Explore, Contribute, and Share</h4>
          <div className="footerImg">
            <a href="https://github.com/KGB-JS/chutte">{octocat}</a>
          </div>

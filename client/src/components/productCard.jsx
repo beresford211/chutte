@@ -6,6 +6,8 @@ import ProductImage from './productImage';
 import Timer from './timer';
 import BuyButton from './buyButton';
 import ProductDetailModal from './productDetailModal';
+import { featureItem, unfeatureItem } from './../actions/actionsProducts';
+import { connect } from 'react-redux';
 
 class ProductCard extends React.Component {
   render() {
@@ -13,7 +15,6 @@ class ProductCard extends React.Component {
         <Col xs={12} sm={6} md={4} className="portfolio-item">
           <div className="productCard" id={this.props.productDetail._id}>
             <ProductImage className="productImage" image={this.props.productDetail.image}/>
-
             <row>
               <div className="productName">
                  {this.props.productDetail.productName}
@@ -43,4 +44,12 @@ class ProductCard extends React.Component {
   }
 };
 
+// function mapStateToProps(state){
+//   console.log(state, "does this occur?")
+//   return {
+//     isOpen : true
+//   }
+// }
+// isOpen={this.props.isOpen} openModel={ ()=> this.props.featureItem(this.props.productDetail._id) }
+ // connect(null, {featureItem: featureItem})(ProductCard);
 export default ProductCard;

@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {GET_PRODUCTS, GET_PRODUCTS_SUCCESS, GET_PRODUCTS_FAILURE, UPDATE_PRODUCT, CREATE_LISTING, CREATE_LISTING_SUCCESS, CREATE_LISTING_FAILURE, PRODUCT_CATEGORY_FILTER, REMOVE_SOLDOUT_PRODUCT, REMOVE_ENDED_AUCTION_PRODUCT} from './../actions/actionConstants';
+import {FEATURE_ITEM, UNFEATURE_ITEM, GET_PRODUCTS, GET_PRODUCTS_SUCCESS, GET_PRODUCTS_FAILURE, UPDATE_PRODUCT, CREATE_LISTING, CREATE_LISTING_SUCCESS, CREATE_LISTING_FAILURE, PRODUCT_CATEGORY_FILTER, REMOVE_SOLDOUT_PRODUCT, REMOVE_ENDED_AUCTION_PRODUCT} from './../actions/actionConstants';
 import {stateContainsProduct, filterProductsByCategory, filterActiveAuctions} from './reducerHelpers';
 
 const initialState = {
@@ -11,12 +11,37 @@ const initialState = {
   postedProduct: false,
   postErrorMSG: false,
   categoryFilter: 'All Products',
-  filteredProductList: []
+  filteredProductList: [],
+  featureitem: ''
 };
 
-function products(state = initialState, action){
+// function toggleModal(state = initialState, action){
+//   switch(action.type){
+//     case UNFEATURE_ITEM:
+//       return Object.assign({}, state, {
+//         featureitem: ""
+//       });
+//     case FEATURE_ITEM:
+//       return Object.assign({}, state, {
+//         featureitem: action.id
+//       });
+//     default:
+//       return state;
+//   }
+// }
 
+function products(state = initialState, action){
+  console.log("action", action);
   switch(action.type){
+    case UNFEATURE_ITEM:
+      return Object.assign({}, state, {
+        featureitem: ""
+      });
+    case FEATURE_ITEM:
+      return Object.assign({}, state, {
+        featureitem: action.id
+      });
+
     case GET_PRODUCTS:
       return Object.assign({}, state, {
         isFetchingProducts: true
@@ -108,7 +133,7 @@ function createListing(state = initialState, action){
 
 const productReducer = combineReducers({
   products,
-  createListing
+  createListing,
 });
 
 export default productReducer;

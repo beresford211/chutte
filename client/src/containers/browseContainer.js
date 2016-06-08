@@ -6,10 +6,10 @@ import {filterByCategory, postBuyResetMsg} from './../actions/actionsProducts';
 
 function mapDispatchToProps(dispatch){
    return {
-     filter: function(category){
+    filter: function(category){
        dispatch(filterByCategory(category));
-     },
-     submitSignout: function(){
+    },
+    submitSignout: function(){
         dispatch(userLogout());
     },
     resetBuyMsg: function(){

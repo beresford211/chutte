@@ -18,16 +18,12 @@ class ProductDetailModal extends React.Component {
   }
 
   render() {
-    let popover = <Popover title="popover">PopOver</Popover>
-    let tooltip = <Tooltip id="wow">wow</Tooltip>;
 
     return (
       <div>
-        <Button bsStyle="primary"
-          bsSize="large"
-          onClick={this.open.bind(this)}>
+        <div className="buy-btn" onClick={this.open.bind(this)}>
           Buy Now!
-        </Button>
+        </div>
 
         <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
           <Modal.Header closeButton>

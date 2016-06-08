@@ -27,13 +27,13 @@ class ProductDetail extends React.Component {
     };
     this.props.buyProduct(purchaseDetails, this.props.user.token);
   }
+
   componentWillMount() {
     this.findIndex();
   }
   render() {
     let userAuthMsg = this.props.user.token === '' ? <p className="alert alert-danger">Please signup or signin</p> : <p></p>;
-
-  let userPurchaseBuy = this.props.userPurchaseBuy === true ? <p className="alert alert-success ">Thank you for the purchase! A purchase confirmation will be emailed shortly.</p>: <p></p>;
+    let userPurchaseBuy = this.props.userPurchaseBuy === true ? <p className="alert alert-success ">Thank you for the purchase! A purchase confirmation will be emailed shortly.</p>: <p></p>;
 
     return (
       <div>
@@ -49,7 +49,8 @@ class ProductDetail extends React.Component {
             <div className="productName">
               <p>Product: {this.props.products[this.productIndex].productName}</p>
             </div>
-
+              {userAuthMsg}
+              {userPurchaseBuy}
             <div>
               <p>Description: {this.props.products[this.productIndex].description}</p>
             </div>
@@ -71,17 +72,15 @@ class ProductDetail extends React.Component {
             </div>
 
             <div>
-              <button className="btn btn-lg btn-primary" type="button" disabled={this.props.user.token === ''} onClick={this.handleBuy.bind(this)}>Confirm</button>
+              <button className="buy-btn" type="button" disabled={this.props.user.token === ''} onClick={this.handleBuy.bind(this)}>Confirm</button>
             </div>
-                {userAuthMsg}
-                {userPurchaseBuy}
             </div>
           </div>
         </div>
         </div>
         </div>
         </div>
-        </div>
+      </div>
     );
   }
 }
@@ -98,7 +97,7 @@ function mapStateToProps(state){
   return {
    products: state.productStore.products.productList,
    userPurchaseBuy: state.userStore.userPurchases.postedBuy,
-   user: state.userStore.userAuth
+   user: state.userStore.userAuth,
  };
 }
 

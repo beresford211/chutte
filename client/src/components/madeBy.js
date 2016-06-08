@@ -9,7 +9,6 @@ class MadeBY extends React.Component {
                 <div className='row'>
                     <div className='col-lg-12 text-center'>
                         <h2 className='section-heading'>Created By</h2>
-                        
                     </div>
                 </div>
             </div>

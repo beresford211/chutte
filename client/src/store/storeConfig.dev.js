@@ -13,6 +13,11 @@ export default function configureStore(history, initialState = {}){
     DevTools.instrument()
   );
 
+//   syncHistoryWithStore(history, store, {
+//   selectLocationState = defaultSelectLocationState,
+//   adjustUrlOnReplay = true
+// } = {})
+
   const store = createStore(rootReducer, initialState, enhancer);
 
     if (module.hot) {
