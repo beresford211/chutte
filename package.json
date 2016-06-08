@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KGB-JS/chutte.git"
+    "url": "git+https://github.com/beresford211/chutte.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KGB-JS/chutte/issues"
+    "url": "https://github.com/beresford211/chutte/issues"
   },
-  "homepage": "https://github.com/KGB-JS/chutte#readme",
+  "homepage": "https://github.com/beresford211/chutte#readme",
   "dependencies": {
     "babel-core": "^6.4.0",
     "babel-loader": "^6.2.1",
