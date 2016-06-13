@@ -50,7 +50,7 @@ module.exports = {
     path: path.resolve(ROOT_PATH, 'client/public/dist'),
     filename: 'bundle.js',
     historyApiFallback: true,
-    hot: true,
+    hot: false,
     inline: true,
     progress: true
   },
