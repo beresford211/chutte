@@ -72270,7 +72270,6 @@
 	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
 	  var action = arguments[1];
 	
-	  console.log("action", action);
 	  switch (action.type) {
 	    case _actionConstants.UNFEATURE_ITEM:
 	      return Object.assign({}, state, {
@@ -72696,8 +72695,10 @@
 	'use strict';
 	
 	if ((undefined) === 'production') {
+	  console.log("production testing");
 	  module.exports = __webpack_require__(1083);
 	} else {
+	  console.log("dev testing");
 	  module.exports = __webpack_require__(1081);
 	}
 	

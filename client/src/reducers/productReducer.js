@@ -31,7 +31,6 @@ const initialState = {
 // }
 
 function products(state = initialState, action){
-  console.log("action", action);
   switch(action.type){
     case UNFEATURE_ITEM:
       return Object.assign({}, state, {
