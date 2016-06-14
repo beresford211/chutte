@@ -100,7 +100,7 @@ module.exports = {
                 .then(function() {
                     emit.emitAuction(makeNewItem._id);
                     var timeId = setInterval(function() {
-                        emit.emitAuction(makeNewItem._id)
+                        emit.emitAuction(makeNewItem._id);
                     }, 900000);
                     timeStorage[makeNewItem._id] = timeId;
                     res.status(200).send(makeNewItem);

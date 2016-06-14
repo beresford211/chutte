@@ -2,7 +2,6 @@ import {checkStatus, parseJSON} from './actionsHelper';
 import {UNFEATURE_ITEM, FEATURE_ITEM, GET_PRODUCTS, GET_PRODUCTS_SUCCESS, GET_PRODUCTS_FAILURE, UPDATE_PRODUCT, POST_BUY, POST_BUY_SUCCESS, POST_BUY_FAILURE, PRODUCT_CATEGORY_FILTER, POST_BUY_RESET_MSG, REMOVE_SOLDOUT_PRODUCT, REMOVE_ENDED_AUCTION_PRODUCT} from './actionConstants';
 
 export function featureItem(id){
-  console.log("THIS NEVER HAPPENS",id);
   return {
     type: FEATURE_ITEM,
     id: id,

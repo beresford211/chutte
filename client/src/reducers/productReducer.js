@@ -12,7 +12,6 @@ const initialState = {
   postErrorMSG: false,
   categoryFilter: 'All Products',
   filteredProductList: [],
-  featureitem: ''
 };
 
 // function toggleModal(state = initialState, action){
